@@ -62,20 +62,22 @@
 			?>
 		</div>
 		<div class="fl-nav-mobile-cta">
-			<a class="fl-nav-mobile-phone" href="<?php echo $phone ? 'tel:' . esc_attr( preg_replace( '/\s+/', '', $phone ) ) : '#'; ?>">
-				<?php echo fl_icon( 'phone' ); ?>
-				<?php echo $phone ? esc_html( $phone ) : esc_html__( 'Τηλέφωνο σύντομα', 'firewoodleader' ); ?>
-			</a>
-			<?php if ( fl_opt( 'fl_facebook' ) || fl_opt( 'fl_instagram' ) ) : ?>
-			<div class="fl-social-header">
-				<?php if ( fl_opt( 'fl_facebook' ) ) : ?>
-					<a href="<?php echo esc_url( fl_opt( 'fl_facebook' ) ); ?>" target="_blank" rel="noopener" aria-label="Facebook"><?php echo fl_icon( 'fb' ); ?></a>
-				<?php endif; ?>
-				<?php if ( fl_opt( 'fl_instagram' ) ) : ?>
-					<a href="<?php echo esc_url( fl_opt( 'fl_instagram' ) ); ?>" target="_blank" rel="noopener" aria-label="Instagram"><?php echo fl_icon( 'ig' ); ?></a>
+			<div class="fl-nav-mobile-top-row">
+				<a class="fl-nav-mobile-phone" href="<?php echo $phone ? 'tel:' . esc_attr( preg_replace( '/\s+/', '', $phone ) ) : '#'; ?>">
+					<?php echo fl_icon( 'phone' ); ?>
+					<?php echo $phone ? esc_html( $phone ) : esc_html__( 'Τηλέφωνο σύντομα', 'firewoodleader' ); ?>
+				</a>
+				<?php if ( fl_opt( 'fl_facebook' ) || fl_opt( 'fl_instagram' ) ) : ?>
+				<div class="fl-social-header">
+					<?php if ( fl_opt( 'fl_facebook' ) ) : ?>
+						<a href="<?php echo esc_url( fl_opt( 'fl_facebook' ) ); ?>" target="_blank" rel="noopener" aria-label="Facebook"><?php echo fl_icon( 'fb' ); ?></a>
+					<?php endif; ?>
+					<?php if ( fl_opt( 'fl_instagram' ) ) : ?>
+						<a href="<?php echo esc_url( fl_opt( 'fl_instagram' ) ); ?>" target="_blank" rel="noopener" aria-label="Instagram"><?php echo fl_icon( 'ig' ); ?></a>
+					<?php endif; ?>
+				</div>
 				<?php endif; ?>
 			</div>
-			<?php endif; ?>
 			<a class="fl-btn" href="<?php echo esc_url( home_url( '/epikoinonia/' ) ); ?>"><?php esc_html_e( 'Ζητήστε Προσφορά', 'firewoodleader' ); ?> →</a>
 		</div>
 	</nav>
